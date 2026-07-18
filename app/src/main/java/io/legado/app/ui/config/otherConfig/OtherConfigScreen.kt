@@ -6,7 +6,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
-import androidx.compose.ui.res.stringArrayResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import io.legado.app.R
@@ -14,7 +13,6 @@ import io.legado.app.ui.theme.adaptiveContentPadding
 import io.legado.app.ui.widget.components.AppScaffold
 import io.legado.app.ui.widget.components.SplicedColumnGroup
 import io.legado.app.ui.widget.components.settingItem.ClickableSettingItem
-import io.legado.app.ui.widget.components.settingItem.DropdownListSettingItem
 import io.legado.app.ui.widget.components.settingItem.InputSettingItem
 import io.legado.app.ui.widget.components.settingItem.SwitchSettingItem
 import io.legado.app.ui.widget.components.topbar.GlassMediumFlexibleTopAppBar
@@ -51,22 +49,6 @@ fun OtherConfigScreen(
         ) {
             item {
                 SplicedColumnGroup {
-                DropdownListSettingItem(
-                    title = stringResource(R.string.language),
-                    selectedValue = state.language,
-                    displayEntries = stringArrayResource(R.array.language),
-                    entryValues = stringArrayResource(R.array.language_value),
-                    onValueChange = { onIntent(OtherConfigIntent.LanguageChanged(it)) }
-                )
-
-                DropdownListSettingItem(
-                    title = stringResource(R.string.update_to_variant_title),
-                    description = stringResource(R.string.update_to_variant_summary),
-                    selectedValue = state.updateToVariant,
-                    displayEntries = stringArrayResource(R.array.default_app_variant),
-                    entryValues = stringArrayResource(R.array.default_app_variant_value),
-                    onValueChange = { onIntent(OtherConfigIntent.UpdateToVariantChanged(it)) }
-                )
 
                 SwitchSettingItem(
                     title = stringResource(R.string.auto_check_update_on_start_title),
@@ -111,13 +93,6 @@ fun OtherConfigScreen(
                     title = stringResource(R.string.background_permission),
                     description = stringResource(R.string.ignore_battery_permission_rationale),
                     onClick = { onIntent(OtherConfigIntent.RequestBatteryPermission) }
-                )
-
-                SwitchSettingItem(
-                    title = stringResource(R.string.firebase_enable_title),
-                    description = stringResource(R.string.firebase_enable_summary),
-                    checked = state.firebaseEnable,
-                    onCheckedChange = { onIntent(OtherConfigIntent.FirebaseEnableChanged(it)) }
                 )
 
                 ClickableSettingItem(
@@ -238,19 +213,6 @@ fun OtherConfigScreen(
                     onCheckedChange = { onIntent(OtherConfigIntent.ProcessTextChanged(it)) }
                 )
 
-                SwitchSettingItem(
-                    title = stringResource(R.string.record_log),
-                    description = stringResource(R.string.record_debug_log),
-                    checked = state.recordLog,
-                    onCheckedChange = { onIntent(OtherConfigIntent.RecordLogChanged(it)) }
-                )
-
-                SwitchSettingItem(
-                    title = stringResource(R.string.record_heap_dump_t),
-                    description = stringResource(R.string.record_heap_dump_s),
-                    checked = state.recordHeapDump,
-                    onCheckedChange = { onIntent(OtherConfigIntent.RecordHeapDumpChanged(it)) }
-                )
                 }
             }
         }

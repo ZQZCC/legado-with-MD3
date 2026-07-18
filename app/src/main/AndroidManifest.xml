@@ -259,12 +259,6 @@
             android:configChanges="locale|layoutDirection|uiMode|screenLayout"
             android:enableOnBackInvokedCallback="true"
             android:launchMode="standard" />
-        <activity
-            android:name=".ui.about.CrashReportActivity"
-            android:configChanges="locale|layoutDirection|uiMode|screenLayout"
-            android:enableOnBackInvokedCallback="true"
-            android:excludeFromRecents="true"
-            android:launchMode="singleTask" />
         <!-- 书源管理 -->
         <activity
             android:name=".ui.book.source.manage.BookSourceActivity"
@@ -576,15 +570,6 @@
                 tools:node="remove" />
         </provider>
 
-        <provider
-            android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="${applicationId}.firebaseinitprovider"
-            android:exported="false"
-            tools:node="remove" />
-
-        <meta-data
-            android:name="channel"
-            android:value="${APP_CHANNEL_VALUE}" />
     </application>
 
     <queries>

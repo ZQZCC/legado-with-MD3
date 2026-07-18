@@ -63,7 +63,6 @@ import io.legado.app.model.BookCover
 import io.legado.app.ui.book.read.page.entities.TextLine
 import io.legado.app.ui.config.otherConfig.OtherConfig
 import io.legado.app.utils.ChineseUtils
-import io.legado.app.utils.FirebaseManager
 import io.legado.app.utils.LogUtils
 import io.legado.app.utils.getPrefBoolean
 import io.legado.app.utils.getPrefString
@@ -141,7 +140,6 @@ class App : Application(), ImageLoaderFactory {
             }
         }
         super.onCreate()
-        FirebaseManager.init(this)
         CrashHandler(this)
         if (isDebuggable) {
             ThreadUtils.setThreadAssertsDisabledForTesting(true)

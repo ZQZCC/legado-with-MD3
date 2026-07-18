@@ -10,7 +10,6 @@ data class OtherConfigUiState(
     val webServiceAutoStart: Boolean = false,
     val autoRefresh: Boolean = false,
     val defaultToRead: Boolean = false,
-    val firebaseEnable: Boolean = true,
     val defaultBookTreeUri: String? = null,
     val antiAlias: Boolean = false,
     val replaceEnableDefault: Boolean = true,
@@ -55,7 +54,6 @@ sealed interface OtherConfigIntent {
     data class WebServiceAutoStartChanged(val value: Boolean) : OtherConfigIntent
     data class AutoRefreshChanged(val value: Boolean) : OtherConfigIntent
     data class DefaultToReadChanged(val value: Boolean) : OtherConfigIntent
-    data class FirebaseEnableChanged(val value: Boolean) : OtherConfigIntent
     data class DefaultBookTreeUriChanged(val value: String?) : OtherConfigIntent
     data class AntiAliasChanged(val value: Boolean) : OtherConfigIntent
     data class ReplaceEnableDefaultChanged(val value: Boolean) : OtherConfigIntent

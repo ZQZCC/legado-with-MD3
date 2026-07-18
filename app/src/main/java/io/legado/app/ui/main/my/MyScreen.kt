@@ -230,13 +230,6 @@ fun MyScreen(
                     }
                 )
                 ClickableSettingItem(
-                    title = stringResource(R.string.about),
-                    imageVector = Icons.Default.Info,
-                    onClick = {
-                        onNavigate(PrefClickEvent.OpenAbout)
-                    }
-                )
-                ClickableSettingItem(
                     title = stringResource(R.string.exit),
                     imageVector = Icons.AutoMirrored.Filled.ExitToApp,
                     onClick = {

@@ -101,8 +101,6 @@ class OtherConfigViewModel(
                 updateOtherSetting(OtherSettingsUpdate.AutoRefresh(intent.value))
             is OtherConfigIntent.DefaultToReadChanged ->
                 updateOtherSetting(OtherSettingsUpdate.DefaultToRead(intent.value))
-            is OtherConfigIntent.FirebaseEnableChanged ->
-                updateOtherSetting(OtherSettingsUpdate.FirebaseEnable(intent.value))
             is OtherConfigIntent.DefaultBookTreeUriChanged ->
                 updateOtherSetting(OtherSettingsUpdate.DefaultBookTreeUri(intent.value))
             is OtherConfigIntent.AntiAliasChanged ->
@@ -398,7 +396,6 @@ private fun OtherSettings.toUiState(current: OtherConfigUiState): OtherConfigUiS
         webServiceAutoStart = webServiceAutoStart,
         autoRefresh = autoRefresh,
         defaultToRead = defaultToRead,
-        firebaseEnable = firebaseEnable,
         defaultBookTreeUri = defaultBookTreeUri,
         antiAlias = antiAlias,
         replaceEnableDefault = replaceEnableDefault,

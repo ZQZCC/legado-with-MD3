@@ -14,7 +14,6 @@ sealed interface OtherSettingsUpdate {
     data class WebServiceAutoStart(val value: Boolean) : OtherSettingsUpdate
     data class AutoRefresh(val value: Boolean) : OtherSettingsUpdate
     data class DefaultToRead(val value: Boolean) : OtherSettingsUpdate
-    data class FirebaseEnable(val value: Boolean) : OtherSettingsUpdate
     data class DefaultBookTreeUri(val value: String?) : OtherSettingsUpdate
     data class AntiAlias(val value: Boolean) : OtherSettingsUpdate
     data class ReplaceEnableDefault(val value: Boolean) : OtherSettingsUpdate

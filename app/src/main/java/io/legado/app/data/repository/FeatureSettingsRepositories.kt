@@ -469,7 +469,6 @@ class OtherSettingsRepository : OtherSettingsGateway {
                 notificationsPost = preferences.compatDsBoolean(PreferKey.notificationsPost) ?: true,
                 ignoreBatteryPermission =
                     preferences.compatDsBoolean(PreferKey.ignoreBatteryPermission) ?: true,
-                firebaseEnable = preferences.compatDsBoolean(PreferKey.firebaseEnable) ?: true,
                 defaultBookTreeUri = preferences.compatDsString(PreferKey.defaultBookTreeUri),
                 antiAlias = preferences.compatDsBoolean(PreferKey.antiAlias) ?: false,
                 replaceEnableDefault = preferences.compatDsBoolean(PreferKey.replaceEnableDefault) ?: true,
@@ -493,7 +492,6 @@ class OtherSettingsRepository : OtherSettingsGateway {
             is OtherSettingsUpdate.WebServiceAutoStart -> PreferKey.webServiceAutoStart to update.value
             is OtherSettingsUpdate.AutoRefresh -> PreferKey.autoRefresh to update.value
             is OtherSettingsUpdate.DefaultToRead -> PreferKey.defaultToRead to update.value
-            is OtherSettingsUpdate.FirebaseEnable -> PreferKey.firebaseEnable to update.value
             is OtherSettingsUpdate.DefaultBookTreeUri -> PreferKey.defaultBookTreeUri to update.value
             is OtherSettingsUpdate.AntiAlias -> PreferKey.antiAlias to update.value
             is OtherSettingsUpdate.ReplaceEnableDefault -> PreferKey.replaceEnableDefault to update.value

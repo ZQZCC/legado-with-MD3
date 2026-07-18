@@ -50,6 +50,7 @@
 # 记得proguard-android.txt中一定不要加-dontoptimize才起作用
 # 另外的一种实现方案是通过BuildConfig.DEBUG的变量来控制
 -assumenosideeffects class android.util.Log {
+    public static boolean isLoggable(java.lang.String, int);
     public static int v(...);
     public static int i(...);
     public static int w(...);

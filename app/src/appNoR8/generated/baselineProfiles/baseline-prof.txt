@@ -19812,9 +19812,6 @@ HSPLcom/google/android/material/theme/overlay/MaterialThemeOverlay;->wrap(Landro
 HSPLcom/google/android/material/theme/overlay/MaterialThemeOverlay;->wrap(Landroid/content/Context;Landroid/util/AttributeSet;II[I)Landroid/content/Context;
 Lcom/google/common/util/concurrent/Striped$SmallLazyStriped$$ExternalSyntheticBackportWithForwarding0;
 HSPLcom/google/common/util/concurrent/Striped$SmallLazyStriped$$ExternalSyntheticBackportWithForwarding0;->m(Ljava/util/concurrent/atomic/AtomicReferenceArray;ILjava/lang/Object;Ljava/lang/Object;)Z
-Lcom/google/firebase/FirebaseApp;
-HSPLcom/google/firebase/FirebaseApp;-><clinit>()V
-HSPLcom/google/firebase/FirebaseApp;->getApps(Landroid/content/Context;)Ljava/util/List;
 Lcom/google/gson/FieldNamingPolicy;
 HSPLcom/google/gson/FieldNamingPolicy;->$values()[Lcom/google/gson/FieldNamingPolicy;
 HSPLcom/google/gson/FieldNamingPolicy;-><clinit>()V
@@ -22261,7 +22258,6 @@ HSPLio/legado/app/help/config/AppConfig;-><init>()V
 HSPLio/legado/app/help/config/AppConfig;->getAutoCheckNewBackup()Z
 PLio/legado/app/help/config/AppConfig;->getBackupPath()Ljava/lang/String;
 PLio/legado/app/help/config/AppConfig;->getChineseConverterType()I
-HSPLio/legado/app/help/config/AppConfig;->getFirebaseEnable()Z
 PLio/legado/app/help/config/AppConfig;->getOnlyLatestBackup()Z
 HSPLio/legado/app/help/config/AppConfig;->getPrefUserAgent()Ljava/lang/String;
 HSPLio/legado/app/help/config/AppConfig;->getPureBlack()Z
@@ -22273,7 +22269,6 @@ PLio/legado/app/help/config/AppConfig;->getWebDavDeviceName()Ljava/lang/String;
 HSPLio/legado/app/help/config/AppConfig;->isCronet()Z
 HSPLio/legado/app/help/config/AppConfig;->isNightTheme()Z
 HSPLio/legado/app/help/config/AppConfig;->isPredictiveBackEnabled()Z
-HSPLio/legado/app/help/config/AppConfig;->setFirebaseEnable(Z)V
 Lio/legado/app/help/config/LocalConfig;
 HSPLio/legado/app/help/config/LocalConfig;-><clinit>()V
 HSPLio/legado/app/help/config/LocalConfig;-><init>()V
@@ -24526,13 +24521,6 @@ HSPLio/legado/app/utils/FileUtils;->delete(Ljava/io/File;Z)Z
 HSPLio/legado/app/utils/FileUtils;->delete(Ljava/lang/String;Z)Z
 HSPLio/legado/app/utils/FileUtils;->deleteResolveEBUSY(Ljava/io/File;)Z
 HSPLio/legado/app/utils/FileUtils;->getPath(Ljava/io/File;[Ljava/lang/String;)Ljava/lang/String;
-Lio/legado/app/utils/FirebaseManager;
-HSPLio/legado/app/utils/FirebaseManager;-><clinit>()V
-HSPLio/legado/app/utils/FirebaseManager;-><init>()V
-HSPLio/legado/app/utils/FirebaseManager;->applyState(Landroid/content/Context;Z)V
-HSPLio/legado/app/utils/FirebaseManager;->init(Landroid/content/Context;)V
-HSPLio/legado/app/utils/FirebaseManager;->isEnabled()Z
-HSPLio/legado/app/utils/FirebaseManager;->setEnabled(Z)V
 Lio/legado/app/utils/GsonExtensionsKt;
 HSPLio/legado/app/utils/GsonExtensionsKt;-><clinit>()V
 HSPLio/legado/app/utils/GsonExtensionsKt;->GSON_delegate$lambda$0()Lcom/google/gson/Gson;

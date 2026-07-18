@@ -8,7 +8,6 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.room)
     alias(libs.plugins.ksp)
-    alias(libs.plugins.google.services)
     alias(libs.plugins.baselineprofile)
 }
 
@@ -54,7 +53,7 @@ android {
         versionCode = System.getenv("COMMIT_NUMBER")?.toInt()?.let { 10000 + it } ?: 32640
         versionName = System.getenv("APP_VERSION_NAME") ?: projectVersionName
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-
+        resConfigs("zh-rCN", "xxhdpi")
         buildConfigField("String", "Cronet_Version", "\"${project.findProperty("CronetVersion")}\"")
         buildConfigField(
             "String",
@@ -140,9 +139,12 @@ android {
     }
 
     packaging {
-        resources.excludes.add("META-INF/*")
+        resources {
+            excludes += "DebugProbesKt.bin"
+            excludes += "log4j.properties"
+            excludes += "META-INF/*"
+        }
     }
-
     sourceSets {
         getByName("androidTest").assets.directories.add("$projectDir/schemas")
     }
@@ -238,9 +240,6 @@ dependencies {
     implementation(libs.quick.chinese.transfer.core)
     implementation(libs.hutool.crypto)
     //noinspection GradleDependency
-    implementation(platform(libs.firebase.bom))
-    implementation(libs.firebase.analytics)
-    implementation(libs.firebase.perf)
     implementation(libs.androidx.datastore.preferences)
     implementation(libs.androidx.palette)
     implementation(libs.androidx.core.splashscreen)

@@ -565,12 +565,6 @@ object AppConfig {
             appCtx.putPrefBoolean(PreferKey.brightnessVwPos, value)
         }
 
-    var firebaseEnable: Boolean
-        get() = OtherConfig.firebaseEnable
-        set(value) {
-            OtherConfig.firebaseEnable = value
-        }
-
     //跳转到漫画界面不使用富文本模式
     val showMangaUi: Boolean
         get() = ReadMangaConfig.showMangaUi
